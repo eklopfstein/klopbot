@@ -2,9 +2,6 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
     {
-        if (power = "off") {
-            return;
-        }
         else if (!message.member.hasPermission("ADMINISTATOR")) {
             return message.reply("Only admins can use this command.");
         }
