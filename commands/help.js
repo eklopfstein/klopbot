@@ -2,9 +2,6 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
     {
-        if (power = "off") {
-            return;
-        }
         else {
             message.channel.send("Commands:\n" +
                 "!next                          Show date of next meeting(will be posted in Announcements chat) \n" +
