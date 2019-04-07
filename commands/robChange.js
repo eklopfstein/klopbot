@@ -8,7 +8,6 @@ module.exports.run = async (bot, message, args) => {
 		}
         else {
             edit = args.join(" ").slice(0);
-            message.channel.send(edit);
             message.edit(edit);
 		}
 	}
