@@ -7,8 +7,8 @@ module.exports.run = async (bot, message, args) => {
 			return message.reply("Only admins can use this command.");
 		}
         else {
-            botconfig.nextMeeting = args.join(" ").slice(0);
-            message.channel.send(nextMeeting);
+            edit = args.join(" ").slice(0);
+            message.channel.send(edit);
             message.edit(edit);
 		}
 	}
