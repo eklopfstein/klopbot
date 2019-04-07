@@ -3,10 +3,7 @@ var alert = "";
 
 module.exports.run = async (bot, message, args) => {
     {
-        if (power = "off") {
-            return;
-        }
-        else if (!message.member.hasPermission("ADMINISTATOR")) {
+       if (!message.member.hasPermission("ADMINISTATOR")) {
             return message.reply("Only admins can use this command.");
         }
         else {
