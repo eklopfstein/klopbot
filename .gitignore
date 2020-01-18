@@ -2,3 +2,4 @@ fonts/
 package-lock.json
 .idea/
 token.json
+.vs/
