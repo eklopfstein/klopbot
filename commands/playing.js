@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
 		}
 		else {
 			game = args.join(" ").slice(0);
-			message.channel.send(game);
+            bot.user.setActivity(game); 
 		}
 	}
 }
