@@ -1,5 +1,5 @@
 const botconfig = require("./botconfig.json");
-//const tokenfile = require("./token.json");
+const tokenfile = require("./token.json");
 const Discord = require("discord.js");
 const fs = require("fs");
 const bot = new Discord.Client({ disableEveryone: true });
@@ -43,7 +43,15 @@ bot.on("message", async message => {
 });
 
 bot.on('guildMemberAdd', member => {
-    const channel = member.guild.channels.find(ch => ch.name === 'member-log');
-    channel.send(`Welcome to the server, ${member}`);
+    const channel = "372585004871712781";
+    if (!channel) return;
+    channel.send(`Welcome to the server, ${member}.`);
 });
-bot.login(botconfig.token);
+
+bot.on("guildMemberRemove", (member) => {
+    const channel = "372585004871712781";
+    if (!channel) return;
+    channel.send(`Bye bye ${member}.`);
+});
+
+bot.login(tokenfile.token);

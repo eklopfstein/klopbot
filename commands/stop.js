@@ -1,4 +1,5 @@
 const Discord = require("discord.js");
+const botconfig = require("./../botconfig.json");
 
 module.exports.run = async (bot, message, args) => {
     if (!message.member.hasPermission("ADMINISTATOR")) {
@@ -7,6 +8,7 @@ module.exports.run = async (bot, message, args) => {
     }
     else {
         bot.user.setActivity("Dead");
+        botconfig.power = "off";
         message.channel.send(bot.user.username + " is done!");
         return;
     }

@@ -1,13 +1,18 @@
 const Discord = require("discord.js");
-var edit = "";
+const botconfig = require("./../botconfig.json");
+let edit = "";
 
 module.exports.run = async (bot, message, args) => {
 	{
-		if (!message.member.hasPermission("ADMINISTATOR")) {
+        if (botconfig.power == "off") {
+			return;
+		}
+		else if (!message.member.hasPermission("ADMINISTATOR")) {
 			return message.reply("Only admins can use this command.");
 		}
         else {
-            edit = args.join(" ").slice(0);
+            botconfig.nextMeeting = args.join(" ").slice(0);
+            message.channel.send(nextMeeting);
             message.edit(edit);
 		}
 	}

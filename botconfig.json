@@ -1,5 +1,5 @@
-  {
-  "token": "TOKEN GOES HERE",
-    "prefix": "!",
-      "nextMeeting":  "There is currently no meeting scheduled"
+{
+  "power": "off",
+  "prefix": "!",
+  "nextMeeting": "There is currently no meeting scheduled"
 }
